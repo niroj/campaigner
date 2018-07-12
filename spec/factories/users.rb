@@ -2,11 +2,17 @@
 
 FactoryBot.define do
   factory :user do
-    email 'test@example.com'
+    sequence :email do |n|
+      "person#{n}@campaigner.com"
+    end
     password 'please123'
 
     trait :expert do
       role 'expert'
+    end
+
+    trait :novice do
+      role 'novice'
     end
   end
 end

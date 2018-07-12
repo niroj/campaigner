@@ -22,6 +22,6 @@ feature 'User delete', :devise, :js do
     visit edit_user_registration_path(user)
     click_button 'Cancel my account'
     page.driver.browser.switch_to.alert.accept
-    expect(page).to have_content I18n.t 'devise.registrations.destroyed'
+    expect(page).to have_content 'You need to sign in or sign up before continuing.'
   end
 end
