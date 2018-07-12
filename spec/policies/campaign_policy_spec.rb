@@ -35,11 +35,9 @@ describe CampaignPolicy do
   end
 
   permissions :destroy? do
-    it 'prevents deleting yourself' do
-      expect(subject).not_to permit(current_user, current_user)
-    end
-    it 'allows an expert to delete any user' do
-      expect(subject).to permit(expert_user, other_user)
+    it 'allows an expert to delete any campaign' do
+      campaign = FactoryBot.create :campaign
+      expect(subject).to permit(expert_user, campaign)
     end
   end
 end

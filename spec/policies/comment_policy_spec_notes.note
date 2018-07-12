@@ -1,0 +1,35 @@
+# frozen_string_literal: true
+
+describe CommentPolicy do
+  subject { CommentPolicy }
+  let(:current_user) { FactoryBot.build_stubbed(:user) }
+  let(:other_user) { FactoryBot.build_stubbed(:user) }
+  let(:novice) { FactoryBot.build_stubbed(:user) }
+  let(:campaign_comment) { FactoryBot.build_stubbed(:campaign_comment) }
+
+  let(:novice_todo) { FactoryBot.build_stubbed(:todo, creator: novice)}
+  let(:todo_comment) { FactoryBot.build_stubbed(:todo_comment, commentable: novice_todo) }
+
+  permissions :create? do
+    it 'allows on Campaign' do
+      expect(subject).to permit(campaign_comment, current_user)
+    end
+    it 'allows on Todo of novice ' do
+      expect(subject).to permit(todo_comment, current_user)
+    end
+  end
+
+  permissions :update? do
+    it 'allows commentor to update' do
+      expect(subject).to permit(campaign_comment.commentor, campaign_comment)
+      expect(subject).not_to permit(other_user, campaign_comment)
+    end
+  end
+
+  permissions :destroy? do
+    it 'allows commentor to be deleted by his/her comments' do
+      expect(subject).to permit(campaign_comment.commentor, campaign_comment)
+      expect(subject).not_to permit(other_user, campaign_comment)
+    end
+  end
+end
