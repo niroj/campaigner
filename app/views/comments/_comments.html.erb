@@ -1,7 +1,11 @@
-<h5>Comments</h5>
-<%= render 'comments/form', comment: Comment.new, resource: resource %>
-<div class="comments_list">
-  <% comments.desc_created_at.each do |comment| %>
-    <%= render comment %>
-  <% end %>
-</div>
+<% if policy(resource.comments.build).create? %>
+  <h5>Comments</h5>
+  <%= render 'comments/form', comment: Comment.new, resource: resource %>
+  <div class="comments_list">
+    <% comments.desc_created_at.each do |comment| %>
+      <%= render comment %>
+    <% end %>
+  </div>
+<% else %>
+  <p>You cannot comment in this <%= resource.class.to_s %>.</p>
+<% end %>

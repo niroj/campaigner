@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :comments, only: [:create, :update]
   resources :campaigns do
-    resources :todos
+    resources :todos, only: [:index, :create, :edit, :update, :destroy, :show]
   end
 
   devise_for :users
