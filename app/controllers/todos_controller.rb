@@ -1,4 +1,5 @@
 class TodosController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_campaign
   before_action :set_todo, only: [:show, :edit, :update, :destroy]
 
@@ -11,6 +12,7 @@ class TodosController < ApplicationController
   # GET /todos/1
   # GET /todos/1.json
   def show
+    @comments = @todo.comments
   end
 
   # GET /todos/new

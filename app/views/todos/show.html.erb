@@ -1,24 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class='row'>
+  <div class='col-sm-12'>
+    <h1 class='d-inline'><%= @todo.title %></h1>
+    <small>By <%= @todo.creator.try(:email) %></small>
+  </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo.title %>
-</p>
+<div class='row'>
+  <div class='col-sm-12'>
+    <%= render 'comments/comments', comments: @comments, resource: @todo %>
+  </div>
+</div>
 
-<p>
-  <strong>Creator:</strong>
-  <%= @todo.creator.try(:email) %>
-</p>
-
-<p>
-  <strong>Completed:</strong>
-  <%= @todo.completed %>
-</p>
-
-<p>
-  <strong>Completed by:</strong>
-  <%= @todo.completed_by.try(:email) %>
-</p>
-
-<%= link_to 'Edit', edit_campaign_todo_path(@todo) %> |
-<%= link_to 'Back', campaign_todos_path %>
+<div class='row'>
+  <div class='col-md-12'>
+    <hr >
+    <div class='float-right'>
+      <%= link_to 'Edit', edit_campaign_todo_path(@todo) %> |
+      <%= link_to 'Back', campaign_todos_path %>
+    </div>
+  </div>
+</div>

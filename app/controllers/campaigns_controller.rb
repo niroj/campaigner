@@ -13,6 +13,8 @@ class CampaignsController < ApplicationController
   # GET /campaigns/1
   # GET /campaigns/1.json
   def show
+    @todos = @campaign.todos.where.not(id: nil)
+    @comments = @campaign.comments
   end
 
   # GET /campaigns/new

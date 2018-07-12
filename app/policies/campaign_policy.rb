@@ -5,7 +5,7 @@ class CampaignPolicy
 
   def initialize(current_user, model)
     @current_user = current_user
-    @user = model
+    @campaign = model
   end
 
   def index?
@@ -33,7 +33,6 @@ class CampaignPolicy
   end
 
   def destroy?
-    return false if @current_user == @user
     @current_user.expert?
   end
 end
