@@ -12,9 +12,7 @@ feature 'destroy' do
     sign_in novice
     visit campaigns_path
 
-    click_link 'Destroy'
-
-    expect(page).to have_content('You cannot access this page.')
+    expect(page).not_to have_selector(:link_or_button, 'Destroy')
   end
 
   scenario 'expert should be able to destroy campaigns' do
