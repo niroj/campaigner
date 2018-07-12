@@ -1,8 +1,8 @@
-<%= form_with(model: comment, local: true) do |form| %>
+<%= form_with(model: comment, remote: true, class: 'comment-form') do |form| %>
   <%= form.hidden_field :commentable_id, value: resource.id %>
   <%= form.hidden_field :commentable_type, value: resource.class.to_s %>
   <div class="input-group">
-    <%= form.text_field :title, id: :comment_title, class: 'form-control' %>
+    <%= form.text_field :title, id: :comment_title, class: 'form-control comment-title', autocomplete: 'off' %>
     <span class="input-group-btn">
       <%= form.submit 'comment', class: 'btn btn-primary' %>
     </span>

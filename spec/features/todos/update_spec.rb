@@ -4,7 +4,7 @@ feature 'edit' do
   let(:user) { FactoryBot.create(:user) }
   let(:todo) { FactoryBot.create(:todo, title: 'Other title') }
 
-  scenario 'user should be able to edit campaigns' do
+  scenario 'user should be able to edit Todo' do
     sign_in user
     visit edit_campaign_todo_path(todo.campaign, todo)
 

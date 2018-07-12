@@ -33,6 +33,7 @@ class TodosController < ApplicationController
       if @todo.save
         format.html { redirect_to [@campaign, @todo], notice: 'Todo was successfully created.' }
         format.json { render :show, status: :created, location: @todo }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @todo.errors, status: :unprocessable_entity }
@@ -47,6 +48,7 @@ class TodosController < ApplicationController
       if @todo.update(todo_params)
         format.html { redirect_to [@campaign, @todo], notice: 'Todo was successfully updated.' }
         format.json { render :show, status: :ok, location: @todo }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @todo.errors, status: :unprocessable_entity }

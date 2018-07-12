@@ -17,20 +17,7 @@
   </div>
   <div class='col-sm-6'>
     <h5>Todos</h5>
-    <%= render 'todos/form', todo: @campaign.todos.build, campaign: @campaign %>
-    <ul class="list-group">
-      <% @todos.each do |todo| %>
-        <li class='list-group-item'>
-          <span>
-            <%= todo.title %>
-          </span>
-          <span class='float-right'>
-            <!-- <%#= link_to 'Done', '#' %> |  -->
-            <%= link_to 'View', campaign_todo_path(@campaign, todo) %>
-          </span>
-        </li>
-      <% end %>
-    </ul>
+    <%= render 'todos/todos', todos: @todos, campaign: @campaign %>
   </div>
 </div>
 <div class='row'>

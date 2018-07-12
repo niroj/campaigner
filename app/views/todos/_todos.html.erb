@@ -1,0 +1,6 @@
+<%= render 'todos/form', todo: campaign.todos.build, campaign: campaign, remote: true %>
+<ul class="list-group todos_list">
+  <% todos.desc_created_at.each do |todo| %>
+    <%= render todo %>
+  <% end %>
+</ul>
