@@ -1,0 +1,9 @@
+<li class='list-group-item'>
+  <span>
+    <%= todo.title %>
+  </span>
+  <span class='float-right'>
+    <!-- <%#= link_to 'Done', '#' %> |  -->
+    <%= link_to 'View', campaign_todo_path(todo.campaign, todo) %>
+  </span>
+</li>

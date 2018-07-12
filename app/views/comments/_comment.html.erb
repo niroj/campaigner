@@ -1,0 +1,6 @@
+<div class="col-md-11 col-sm-10">
+  <h6 class="small">By <%= comment.commentor.try(:email) %> | <%= time_ago_in_words(comment.created_at) %> ago</h6>
+    <p>
+       <%= comment.title %>
+    </p>
+</div>

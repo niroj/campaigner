@@ -1,8 +1,8 @@
-<%= form_with(model: todo, url: [campaign, todo], local: true) do |form| %>
+<%= form_with(model: todo, url: [campaign, todo], remote: remote, local: !remote) do |form| %>
   <div class="input-group">
-    <%= form.text_field :title, id: :comment_title, class: 'form-control' %>
+    <%= form.text_field :title, id: :todo_title, class: 'form-control' %>
     <span class="input-group-btn">
-      <%= form.submit 'Add Todo', class: 'btn btn-primary' %>
+      <%= form.submit class: 'btn btn-primary' %>
     </span>
   </div>
 <% end %>
