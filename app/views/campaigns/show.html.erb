@@ -5,9 +5,7 @@
     <p>
       <%= distance_of_time_in_words(@campaign.duration) %>
       &nbsp; | &nbsp;
-      <% @campaign.tags.split(',').each do |tag| %>
-        <span class='badge badge-info'><%= tag %></span>
-      <% end %>
+      <%= render 'tags', tags: @campaign.tags %>
     </p>
   </div>
 </div>

@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'pg', '~> 0.18'
 gem 'pundit'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'selectize-rails'
 
 group :development, :test do
   gem 'pry-rails'

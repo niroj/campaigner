@@ -2,9 +2,9 @@
   <%= form.hidden_field :commentable_id, value: resource.id %>
   <%= form.hidden_field :commentable_type, value: resource.class.to_s %>
   <div class="input-group">
-    <%= form.text_field :title, id: :comment_title, class: 'form-control comment-title', autocomplete: 'off' %>
+    <%= form.text_field :title, id: :comment_title, class: 'form-control comment-title', autocomplete: 'off', placeholder: 'Add a comment...' %>
     <span class="input-group-btn">
-      <%= form.submit 'comment', class: 'btn btn-primary' %>
+      <%= form.submit 'Comment', class: 'btn btn-primary', data: {disable_with: 'Sending...'} %>
     </span>
   </div>
 <% end %>
