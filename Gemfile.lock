@@ -147,8 +147,6 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
-    rails_apps_pages (0.6.7)
-    rails_layout (1.0.42)
     railties (5.1.6)
       actionpack (= 5.1.6)
       activesupport (= 5.1.6)
@@ -237,8 +235,6 @@ DEPENDENCIES
   puma (~> 3.7)
   pundit
   rails (~> 5.1.6)
-  rails_apps_pages
-  rails_layout
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
