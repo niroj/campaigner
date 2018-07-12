@@ -1,0 +1,6 @@
+<h1>Editing Todo: <%= @todo.title %></h1>
+
+<%= render 'form', todo: @todo, campaign: @campaign %>
+
+<%= link_to 'Show', [@campaign, @todo] %> |
+<%= link_to 'Back', campaign_todos_path %>

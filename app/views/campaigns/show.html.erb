@@ -18,5 +18,6 @@
   <%= @campaign.creator_id %>
 </p>
 
+<%= link_to 'New Todo', new_campaign_todo_path(@campaign) %> |
 <%= link_to 'Edit', edit_campaign_path(@campaign) %> |
 <%= link_to 'Back', campaigns_path %>

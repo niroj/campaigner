@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @todo.title %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @todo.creator.try(:email) %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @todo.completed %>
+</p>
+
+<p>
+  <strong>Completed by:</strong>
+  <%= @todo.completed_by.try(:email) %>
+</p>
+
+<%= link_to 'Edit', edit_campaign_todo_path(@todo) %> |
+<%= link_to 'Back', campaign_todos_path %>
