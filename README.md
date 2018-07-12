@@ -1,50 +1,24 @@
 Homify Campaigner
 ================
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
-
-Rails Composer is supported by developers who purchase our RailsApps tutorials.
-
-Problems? Issues?
------------
-
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
-
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
-
-Ruby on Rails
--------------
-
 This application requires:
 
-- Ruby 2.4.2
+- Ruby 2.5.0
 - Rails 5.1.6
-
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
+- postgreSQL database server
 
 Getting Started
 ---------------
+- Step 1: Clone this project to your local directory
+- Step 2: Inside project root run `gem install bundler` and then `bundle install`
+- Step 3: change database.yml to correctly reflect your local settings
+- Step 4: run `rake db:setup`
+- Step 5: run `rake db:seed`
+- Step 6: start server using `bundle exec rails s`
+- Step 7: open localhost:3000 in browser and login using 'expert@campaigner.com' and password 'campaigner'
 
-Documentation and Support
--------------------------
-
-Issues
--------------
-
-Similar Projects
-----------------
-
-Contributing
-------------
+Note: remove .ruby-gemset file to install gems in global space while doing bundle.
 
 Credits
--------
-
-License
--------
+---------------
+[Niroj Shrestha](mailto:nexus.niroj@gmail.com)

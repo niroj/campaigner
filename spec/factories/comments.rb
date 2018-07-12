@@ -1,8 +1,14 @@
 FactoryBot.define do
   factory :comment do
-    title "MyString"
-    commentor_id ""
-    commentable_id ""
-    commentable_type "MyString"
+    title { Faker::RickAndMorty.quote }
+    commentor { FactoryBot.create(:user) }
+
+    factory :campaign_comment do
+      commentable { FactoryBot.create(:campaign) }
+    end
+
+    factory :todo_comment do
+      commentable { FactoryBot.create(:todo) }
+    end
   end
 end
