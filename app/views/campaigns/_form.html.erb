@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :campaign_title %>
+    <%= form.text_field :title, id: :campaign_title, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :tags %>
-    <%= form.text_area :tags, id: :campaign_tags %>
+    <%= form.text_field :tags, id: :campaign_tags, class: 'selectized-input' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :duration %>
-    <%= form.number_field :duration, id: :campaign_duration %>
+    <%= form.number_field :duration, id: :campaign_duration, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
