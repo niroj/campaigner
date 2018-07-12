@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   after_action :verify_authorized
 
   def index
-    @users = User.all
+    @users = User.novice
     authorize User
   end
 
@@ -34,6 +34,6 @@ class UsersController < ApplicationController
   private
 
   def secure_params
-    params.require(:user).permit(:role)
+    params.require(:user).permit(:role, :status, :username, :profession, :service)
   end
 end

@@ -21,8 +21,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'rails_apps_pages'
-  gem 'rails_layout'
   gem 'listen', '>= 3.0.5', '< 3.2'
 end
 
