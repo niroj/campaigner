@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root to: 'campaigns#index'
 
-  resources :campaigns
+  resources :campaigns do
+    resources :todos
+  end
+
   devise_for :users
   resources :users
+
+  root to: 'campaigns#index'
 end
