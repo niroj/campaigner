@@ -1,5 +1,6 @@
 Campaigner
 ================
+[![Maintainability](https://api.codeclimate.com/v1/badges/625465253f4488107718/maintainability)](https://codeclimate.com/github/niroj/campaigner/maintainability)
 
 This application requires:
 
