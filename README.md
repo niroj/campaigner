@@ -5,7 +5,7 @@ Campaigner
 This application requires:
 
 - Ruby 3.0.0
-- Rails 5.1.6
+- Rails 7.0.1
 - postgreSQL database server
 
 Getting Started
